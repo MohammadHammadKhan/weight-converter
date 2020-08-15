@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weight Converter</h1>
+        <input type="number" class="weightInp">
+        <div class="grams">
+            <h3>Grams:</h3>
+            <p class="grams-conv">0</p>
+        </div>
+        <div class="kilogram">
+            <h3>Kilorams:</h3>
+            <p class="kilograms-conv">0</p>
+        </div>
+        <div class="ounce">
+            <h3>Ounce:</h3>
+            <p class="ounce-conv">0</p>
+        </div>
+    </div>
+    <script>
+        var weight=document.querySelector('.weightInp')
+       
+        weight.addEventListener('keyup',(e)=>{
+            var grams=document.querySelector('.grams-conv')
+            console.log(grams)
+            console.log(weight)
+            grams.textContent=weight.value*453.59237;
+            var kilograms=document.querySelector('.kilograms-conv')
+            kilograms.textContent=weight.value*0.453592;
+            var ounce=document.querySelector('.ounce-conv')
+            ounce.textContent=weight.value*15.99998694864;
+        })
+    </script>
+</body>
+</html>
